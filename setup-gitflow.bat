@@ -22,10 +22,11 @@ set RAFAEL_EMAIL=freitassrafa2006@gmail.com
 
 REM Verificar repositorio Git
 if not exist .git (
-    echo [ERRO] Nao e um repositorio Git!
-    echo Execute: git init
-    pause
-    exit /b 1
+    echo [AVISO] Nao e um repositorio Git. Inicializando...
+    git init
+    git remote add origin https://github.com/Not-Founders/gs2-front.git
+    echo Repositorio inicializado!
+    echo.
 )
 
 echo [1/17] Criando branch develop...

@@ -22,9 +22,11 @@ RAFAEL_EMAIL="rafael@example.com"
 
 # Verificar repositorio Git
 if [ ! -d .git ]; then
-    echo "[ERRO] Nao e um repositorio Git!"
-    echo "Execute: git init"
-    exit 1
+    echo "[AVISO] Nao e um repositorio Git. Inicializando..."
+    git init
+    git remote add origin https://github.com/Not-Founders/gs2-front.git
+    echo "Repositorio inicializado!"
+    echo ""
 fi
 
 echo "[1/17] Criando branch develop..."

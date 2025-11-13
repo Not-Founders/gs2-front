@@ -20,9 +20,11 @@ $RAFAEL_EMAIL = "rafael@example.com"
 
 # Verificar repositorio Git
 if (-not (Test-Path .git)) {
-    Write-Host "[ERRO] Nao e um repositorio Git!" -ForegroundColor Red
-    Write-Host "Execute: git init" -ForegroundColor Yellow
-    exit 1
+    Write-Host "[AVISO] Nao e um repositorio Git. Inicializando..." -ForegroundColor Yellow
+    git init
+    git remote add origin https://github.com/Not-Founders/gs2-front.git
+    Write-Host "Repositorio inicializado!" -ForegroundColor Green
+    Write-Host ""
 }
 
 Write-Host "[1/17] Criando branch develop..." -ForegroundColor Cyan

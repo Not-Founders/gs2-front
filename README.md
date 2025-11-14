@@ -281,3 +281,4 @@ Contribuições são bem-vindas! Para contribuir:
 ---
 
 Desenvolvido pela equipe Not-Founders | © 2025 Todos os direitos reservados.
+
